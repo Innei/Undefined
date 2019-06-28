@@ -1,124 +1,117 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>你来到了一片没有知识的荒原</title>
-    <style>
-      html {
-        font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-          color: #535d5e
-      }
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      body::before {
-        content: "";
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-        background: linear-gradient(
-              to bottom,
-              rgb(177, 172, 172) 10%,
-              transparent 10%
-            )
-            repeat,
-          linear-gradient(to right, rgb(177, 172, 172) 10%, transparent 10%);
-        background-color: #fcfaf2;
-        background-size: 1rem 1rem;
-      }
-      * {
-        box-sizing: border-box;
-        user-select: none;
-      }
-      .wrap {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 20rem;
-        width: 30rem;
-        margin: auto;
-      }
-      .wrap::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, #fff 99%, rgb(177, 172, 172) 99%)
-          repeat-y;
-        background-size: auto 2rem;
-        background-origin: content-box;
-        z-index: -1;
-        margin: 0 -2rem 0 -3rem;
-        border-radius: 0.5rem;
-        box-shadow: 7px 7px 19px -13px #c3dcdd;
-      }
-      .wrap::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 2rem;
-        margin-left: -3rem;
-        background: radial-gradient(#fcfaf2 20%, transparent 20%),
-          radial-gradient(#a0a0a0 16%, transparent 25%);
-        background-size: 3rem 3rem;
-      }
-      .title {
-        text-transform: uppercase;
-        font-size: 2rem;
-        font-weight: 100;
-        text-align: center;
-        margin: 0.5rem;
-      }
-      .about {
-        margin-top: 1rem;
-      }
-      .link {
-        text-align: center;
-      }
-      a {
-        display: inline-block;
-        margin-right: 1rem;
-        text-decoration: none;
-        color: currentColor;
-      }
-      footer{
-        position: absolute;
-        bottom: 1rem;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 6rem;
-      }
-    </style>
-  </head>
-  <body class="">
-    <div class="wrap">
-      <div class="title">yiny</div>
-      <div class="about">一个只会写 bug 的小菜鸡</div><br>
-      <div class="info">
-        <p>这里我还没有想好做什么呢，此域名属于 yiny.</p><br>
-        <p style="margin-top: .1rem">联系我</p><br>
-      </div>
-      <div class="link">
-        <a href="//github.com/Innei">Github</a>
-        <a href="//shizuri.net">Home Page</a>
+    <title>你来到了没有知识的荒原</title>
+    <link
+      crossorigin="anonymous"
+      integrity="sha384-FckWOBo7yuyMS7In0aXZ0aoVvnInlnFMwCv77x9sZpFgOonQgnBj1uLwenWVtsEj"
+      href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    /></head
+
+  ><style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+      height: 100vh;
+      position: relative;
+    }
+    .scene {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      margin-right: 1rem;
+      color: currentColor;
+    }
+    li {
+      display: inline-block;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      transform: translateX(-2rem);
+    }
+    #name {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+    #introduction {
+      transform: translateX(-1rem);
+    }
+    .bg {
+      z-index: -1;
+      position: absolute;
+      height: 400%;
+      top: -200%;
+      left: -200%;
+      width: 400%;
+      transition: transform 2s;
+      transform: translate(100px,100px)
+      /* animation: parallax infinite 8s ease-in-out both; */
+    }
+    .bg-1 {
+      background-image: url("./img/bg1.png");
+    }
+    /* @keyframes parallax {
+        0%,100% {
+            transform: translate(0,0)
+        }
+        30% {
+            transform: translate(100px,100px)
+        }
+    } */
+  </style>
+  <body>
+    <div class="page">
+      <div class="scene head-page">
+        <div class="bg bg-1"></div>
+        <div class="inner">
+          <span id="name">yiny</span>
+          <p id="introduction">学习中的一只小小萌新</p>
+          <ul>
+            <li>
+              <a href="https://github.com/Innei"
+                ><i class="fa fa-github" aria-hidden="true"></i>Github</a
+              >
+            </li>
+            <li>
+              <a href="https://shizuri.net"
+                ><i class="fa fa-comment-o" aria-hidden="true"></i>Note</a
+              >
+            </li>
+            <li>
+              <a href="https://blog.shizuri.net"
+                ><i class="fa fa-rss" aria-hidden="true"></i>Blog</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-    <footer>
-      <p>&copy;2019 yiny.</p>
-    </footer>
   </body>
+  <script>
+    const bg = document.querySelector(".bg-1");
+
+    let lastX = 100,
+      lastY = 100;
+    setInterval(() => {
+      lastX += (Math.random() - 0.5).toFixed(2) * 100;
+      lastY += (Math.random() - 0.5).toFixed(2) * 100;
+      bg.style.transform = `translate(${lastX}px,${lastY}px)`;
+    }, 2000);
+  </script>
 </html>
