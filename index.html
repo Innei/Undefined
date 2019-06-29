@@ -11,107 +11,45 @@
       href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.css"
       rel="stylesheet"
     /></head
-
-  ><style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-    .page {
-      height: 100vh;
-      position: relative;
-    }
-    .scene {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-    a {
-      display: inline-block;
-      text-decoration: none;
-      margin-right: 1rem;
-      color: currentColor;
-    }
-    li {
-      display: inline-block;
-    }
-    ul {
-      margin: 0;
-      padding: 0;
-      transform: translateX(-2rem);
-    }
-    #name {
-      text-align: center;
-      font-size: 3rem;
-      font-weight: 100;
-      text-transform: uppercase;
-    }
-    #introduction {
-      transform: translateX(-1rem);
-    }
-    .bg {
-      z-index: -1;
-      position: absolute;
-      height: 400%;
-      top: -200%;
-      left: -200%;
-      width: 400%;
-      transition: transform 2s;
-      transform: translate(100px,100px)
-      /* animation: parallax infinite 8s ease-in-out both; */
-    }
-    .bg-1 {
-      background-image: url("https://i.loli.net/2019/06/28/5d15b15bf1a6c45396.png");
-    }
-    /* @keyframes parallax {
-        0%,100% {
-            transform: translate(0,0)
-        }
-        30% {
-            transform: translate(100px,100px)
-        }
-    } */
-  </style>
+  ><link rel="stylesheet" href="./src/css/main.css" />
   <body>
-    <div class="page">
-      <div class="scene head-page">
-        <div class="bg bg-1"></div>
-        <div class="inner">
-          <span id="name">yiny</span>
-          <p id="introduction">学习中的一只小小萌新</p>
-          <ul>
-            <li>
-              <a href="https://github.com/Innei"
-                ><i class="fa fa-github" aria-hidden="true"></i>Github</a
-              >
-            </li>
-            <li>
-              <a href="https://shizuri.net"
-                ><i class="fa fa-comment-o" aria-hidden="true"></i>Note</a
-              >
-            </li>
-            <li>
-              <a href="https://blog.shizuri.net"
-                ><i class="fa fa-rss" aria-hidden="true"></i>Blog</a
-              >
-            </li>
-          </ul>
+    <div class="bg-wrap"><div class="bg"></div></div>
+    <div class="page-wrap">
+      <div class="page active">
+        <div class="scene head-page">
+          <div class="inner">
+            <div id="name">yiny</div>
+            <p id="introduction">学习中的一只小小萌新</p>
+            <ul>
+              <li>
+                <a href="https://github.com/Innei"
+                  ><i class="fa fa-github" aria-hidden="true"></i>Github</a
+                >
+              </li>
+              <li>
+                <a href="https://shizuri.net"
+                  ><i class="fa fa-comment-o" aria-hidden="true"></i>Note</a
+                >
+              </li>
+              <li>
+                <a href="https://blog.shizuri.net"
+                  ><i class="fa fa-rss" aria-hidden="true"></i>Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="page">
+        <div class="scene">
+          <div class="bg-white wrap">
+            <h1>关于域名</h1>
+            <p>白嫖的 me 域名, 暂不使用</p>
+          </div>
         </div>
       </div>
     </div>
   </body>
-  <script>
-    const bg = document.querySelector(".bg-1");
-
-    let lastX = 100,
-      lastY = 100;
-    setInterval(() => {
-      lastX += (Math.random() - 0.5).toFixed(2) * 100;
-      lastY += (Math.random() - 0.5).toFixed(2) * 100;
-      bg.style.transform = `translate(${lastX}px,${lastY}px)`;
-    }, 2000);
-  </script>
+  <script src="./src/js/index.js"></script>
 </html>
